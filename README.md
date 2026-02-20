@@ -1,4 +1,4 @@
-# 💫 About Me:
+# About Me:
 👋 Hi, I’m a Computer Science student at the University of Wollongong Dubai, majoring in AI & Big Data.<br>💻 I build modern, sleek websites using Webflow and WordPress, and I’m also skilled in Next.js for SaaS web apps and landing pages.<br>📱 Certified in Flutter App Development, I create cross-platform apps for Android, iOS, Windows, macOS, and Linux, including backend integration.<br>🌐 I hold a Full-Stack Development Certification and work extensively with the MERN stack (MongoDB, Express.js, React, Node.js).<br>🎨 Proficient with Bootstrap, TailwindCSS, and modern UI kits (like shadcn) to deliver clean, responsive interfaces.
 
 
@@ -15,10 +15,6 @@
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=ayxn07&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=ayxn07&theme=dark&hide_border=false)<br/>
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ayxn07&layout=donut-vertical&theme=dark&combine_all_yearly_contributions=true)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=ayxn07&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
