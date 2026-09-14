@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="PORTFOLIO OS">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14042e"/><stop offset="1" stop-color="#0d0221"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2a6d"/><stop offset=".5" stop-color="#7700ff"/><stop offset="1" stop-color="#66bcbe"/></linearGradient>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#7700ff" stroke-opacity=".14"/></pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="blur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  <clipPath id="card"><rect x="1.5" y="1.5" width="417" height="257" rx="14"/></clipPath>
+</defs>
+<style>
+  .mono{font-family:'JetBrains Mono','Fira Code','Cascadia Code',Consolas,Menlo,monospace}
+  .disp{font-family:'Orbitron','Arial Black','Segoe UI Black',Impact,sans-serif;font-weight:900}
+  @keyframes run{to{stroke-dashoffset:-1300}}
+  .run{animation:run 5s linear infinite}
+  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+  .pulse{animation:pulse 1.6s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+  .nudge{animation:nudge 1.4s ease-in-out infinite}
+  
+  @keyframes blink{50%{opacity:0}}
+  .blink{animation:blink 1s steps(1) infinite}
+
+  @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<g clip-path="url(#card)"><rect width="420" height="260" fill="url(#bg)"/><rect width="420" height="260" fill="url(#grid)"/></g>
+<rect x="1.5" y="1.5" width="417" height="257" rx="14" fill="none" stroke="url(#edge)" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="run" x="1.5" y="1.5" width="417" height="257" rx="14" fill="none" stroke="#66bcbe" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="90 1210" filter="url(#glow)"/>
+
+<text class="mono" x="24" y="34" font-size="11" letter-spacing="2" fill="#8b7fb8">PROJECT_04</text>
+<g transform="translate(324 20)">
+  <rect width="72" height="20" rx="10" fill="#ff2a6d" fill-opacity=".12" stroke="#ff2a6d" stroke-opacity=".6"/>
+  <circle class="pulse" cx="11" cy="10" r="3.5" fill="#ff2a6d"/>
+  <text class="mono" x="21" y="14" font-size="10.5" letter-spacing="1" fill="#ff2a6d">ONLINE</text>
+</g>
+
+<text class="disp" x="24" y="86" font-size="26" letter-spacing="2" fill="#66bcbe" opacity=".6" filter="url(#blur)">PORTFOLIO OS</text>
+<text class="disp" x="24" y="86" font-size="26" letter-spacing="2" fill="#fff">PORTFOLIO OS</text>
+<rect x="24" y="98" width="44" height="3" rx="1.5" fill="#66bcbe"/><rect x="72" y="98" width="10" height="3" rx="1.5" fill="#66bcbe"/>
+
+<text class="mono" x="24" y="128" font-size="13" fill="#e0d7ff">A macOS-style desktop that runs in the</text><text class="mono" x="24" y="148" font-size="13" fill="#e0d7ff">browser - windows, dock and apps. It's</text><text class="mono" x="24" y="168" font-size="13" fill="#e0d7ff">my portfolio, but it boots.</text>
+<g transform="translate(24 190)"><rect width="86" height="22" rx="5" fill="#66bcbe" fill-opacity=".1" stroke="#66bcbe" stroke-opacity=".55"/><text class="mono" x="43.0" y="15" text-anchor="middle" font-size="11" fill="#e0d7ff">JavaScript</text></g><g transform="translate(118 190)"><rect width="86" height="22" rx="5" fill="#66bcbe" fill-opacity=".1" stroke="#66bcbe" stroke-opacity=".55"/><text class="mono" x="43.0" y="15" text-anchor="middle" font-size="11" fill="#e0d7ff">Desktop UI</text></g><g transform="translate(212 190)"><rect width="79" height="22" rx="5" fill="#66bcbe" fill-opacity=".1" stroke="#66bcbe" stroke-opacity=".55"/><text class="mono" x="39.5" y="15" text-anchor="middle" font-size="11" fill="#e0d7ff">Live site</text></g>
+<g class="nudge"><text class="mono" x="24" y="240" font-size="12" fill="#66bcbe">&gt;&gt; ayxn07.com</text></g>
+
+<g transform="translate(322 52)">
+  <rect x="0" y="0" width="74" height="52" rx="6" fill="#0d0221" stroke="#66bcbe" stroke-width="1.6"/>
+  <path d="M0 13H74" stroke="#66bcbe" stroke-opacity=".5"/>
+  <circle cx="8" cy="7" r="2.4" fill="#ff2a6d"/><circle cx="16" cy="7" r="2.4" fill="#f9f002"/><circle cx="24" cy="7" r="2.4" fill="#00ff9f"/>
+  <text class="mono" x="7" y="30" font-size="9" fill="#00ff9f">&gt; boot</text>
+  <rect class="blink" x="44" y="23" width="6" height="9" fill="#ff2a6d"/>
+  <rect x="14" y="40" width="46" height="6" rx="3" fill="#7700ff" fill-opacity=".6"/>
+</g>
+</svg>
