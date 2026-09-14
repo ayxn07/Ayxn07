@@ -1,5 +1,5 @@
 <a href="https://portfolio.ayxn07.com">
-  <img src="./assets/portfolio-hero.png" alt="Mohammed Ayaan Khan — portfolio.ayxn07.com" width="100%" />
+  <img src="./assets/portfolio-hero.png" alt="Mohammed Ayaan Khan — portfolio.ayxn07.com" width="100%" style="border-radius:20px"/>
 </a>
 
 <img src="./assets/typing.svg" width="100%" alt="> building AI agents & MCP servers — status: building — Dubai, UAE — CS / AI & Big Data @ UOWD" />
