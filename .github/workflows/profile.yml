@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/profile.yml"]
+    paths:
+      - ".github/workflows/profile.yml"
+      - ".github/scripts/**"
 
 permissions:
   contents: write
@@ -23,8 +25,18 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-neon.svg?color_snake=#ff2a6d&color_dots=#1b0b3a,#4c1d95,#7700ff,#d300c5,#66bcbe
-            dist/snake-light.svg?color_snake=#d300c5&color_dots=#ebedf0,#c4b5fd,#a78bfa,#7c3aed,#3f8f91
+            dist/snake.svg?color_snake=#0a0a0a&color_dots=#5aa8aa,#3f8385,#2b6163,#1a4142,#0c2627
+
+      - name: Paint the teal background
+        run: |
+          python3 - <<'EOF'
+          import pathlib, re
+          p = pathlib.Path("dist/snake.svg")
+          s = p.read_text()
+          x, y, w, h = re.search(r'viewBox="([-\d.]+) ([-\d.]+) ([-\d.]+) ([-\d.]+)"', s).groups()
+          rect = f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="#66bcbe"/>'
+          p.write_text(re.sub(r"(<svg[^>]*>)", lambda m: m.group(1) + rect, s, count=1))
+          EOF
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
@@ -33,12 +45,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  contrib-3d:
+  stats:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
-      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install fonttools
+
+      - name: Render stats cards
+        run: python .github/scripts/render_stats.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
@@ -47,8 +66,8 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A profile-3d-contrib
-          if git commit -m "chore: refresh 3d contribution calendar"; then
+          git add assets/generated
+          if git commit -m "chore: refresh stats cards"; then
             git pull --rebase
             git push
           fi
